@@ -1,8 +1,8 @@
-FROM node:18-alpine
+FROM node:18
 
 WORKDIR /app
 
-COPY react-js /app
+COPY ./react-js ./
 
 RUN npm install
 

@@ -7,7 +7,7 @@ services:
         context: .
         dockerfile: Dockerfile
     ports:
-      - "9091:3000"
+      - "1234:3000"
     volumes:
-      - "./react-js:/app/react-js"
+      - "./react-js:/app"
 ###############################################################################
