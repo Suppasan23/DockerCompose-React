@@ -4,10 +4,15 @@ services:
   web:
     container_name: container_learn_react
     build:
-        context: .
+        context: ./
         dockerfile: Dockerfile
     ports:
       - "1234:3000"
     volumes:
       - "./react-js:/app"
+      - '/app/node_modules'
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
 ###############################################################################
