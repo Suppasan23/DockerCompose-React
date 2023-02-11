@@ -2,10 +2,8 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY react-js ./
+COPY react-js /app
 
 RUN npm install
-
-VOLUME react-js ./
 
 CMD ["npm", "start"]
