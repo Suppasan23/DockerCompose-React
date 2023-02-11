@@ -2,12 +2,12 @@ version: '3.8'
 services:
 ###############################################################################
   web:
-    container_name: container_php_mysql_project1-PHP
+    container_name: container_learn_react
     build:
         context: .
         dockerfile: Dockerfile
     ports:
       - "9091:3000"
     volumes:
-      - "./react-js:/app"
-
+      - "./react-js:/app/react-js"
+###############################################################################
