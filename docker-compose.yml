@@ -2,7 +2,7 @@ version: '3.8'
 services:
 ###############################################################################
   web:
-    container_name: container_learn_react
+    container_name: container_react
     build:
         context: ./
         dockerfile: Dockerfile
