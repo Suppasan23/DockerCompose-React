@@ -1,18 +1,13 @@
-version: '3.8'
+version: '3'
 services:
-###############################################################################
-  web:
-    container_name: container_react
+#################################################################################
+  react-ui:
     build:
-        context: ./
-        dockerfile: Dockerfile
+      context: ./react-js
     ports:
-      - "1234:3000"
-    volumes:
-      - "./react-js:/app"
-      - '/app/node_modules'
+      - "3000:3000"
+    container_name: container-react-js
     stdin_open: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    command: npm start
-###############################################################################
+    volumes:
+       - ./react-js:/usr/src/app/react-js
+       - /usr/src/app/react-js/node_modules
