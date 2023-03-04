@@ -1,0 +1,14 @@
+version: '3'
+services:
+#################################################################################
+  react-ui:
+    build:
+      context: ./react-js
+    ports:
+      - "3000:3000"
+    container_name: container-react-js
+    stdin_open: true
+    volumes:
+       - ./react-js/public:/usr/src/app/react-js/public
+       - ./react-js/src:/usr/src/app/react-js/src
+       - /usr/src/app/react-js/node_modules
